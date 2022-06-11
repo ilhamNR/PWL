@@ -1,100 +1,128 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+	<meta name="generator" content="Hugo 0.84.0">
+	<title>Product example · Bootstrap v5.0</title>
 
-	<style type="text/css">
+	<link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/product/">
 
-	::selection { background-color: #E13300; color: white; }
-	::-moz-selection { background-color: #E13300; color: white; }
 
-	body {
-		background-color: #fff;
-		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
-	}
 
-	a {
-		color: #003399;
-		background-color: transparent;
-		font-weight: normal;
-		text-decoration: none;
-	}
+	<!-- Bootstrap core CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-	a:hover {
-		color: #97310e;
-	}
+	<style>
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		}
 
-	h1 {
-		color: #444;
-		background-color: transparent;
-		border-bottom: 1px solid #D0D0D0;
-		font-size: 19px;
-		font-weight: normal;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
-	}
-
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
-
-	#body {
-		margin: 0 15px 0 15px;
-		min-height: 96px;
-	}
-
-	p {
-		margin: 0 0 10px;
-		padding:0;
-	}
-
-	p.footer {
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
-
-	#container {
-		margin: 10px;
-		border: 1px solid #D0D0D0;
-		box-shadow: 0 0 8px #D0D0D0;
-	}
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
 	</style>
+
+
+	<!-- Custom styles for this template -->
+	<link href="./assets/css/product.css" rel="stylesheet">
 </head>
+
 <body>
 
-<div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+	<header class="site-header sticky-top py-1">
+		<nav class="container d-flex flex-column flex-md-row justify-content-between">
+			<a class="py-2" href="#" aria-label="Product">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24">
+					<title>Product</title>
+					<circle cx="12" cy="12" r="10" />
+					<path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+				</svg>
+			</a>
+			<a class="py-2 d-none d-md-inline-block" href="#">Market</a>
+			<a class="py-2 d-none d-md-inline-block" href="#">News</a>
+			<a class="py-2 d-none d-md-inline-block" href="#">Trade</a>
+			<a class="py-2 d-none d-md-inline-block" href="#">About</a>
+			<a class="py-2 d-none d-md-inline-block" href="#">Register</a>
+		</nav>
+	</header>
 
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+	<main>
+		<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+			<div class="col-md-5 p-lg-5 mx-auto my-5">
+				<h1 class="display-4 fw-normal">Crypbox</h1>
+				<p class="lead fw-normal">The all-in-one crypto portal.</p>
+				<a class="btn btn-outline-secondary" href="#">Get Started</a>
+			</div>
+			<div class="product-device shadow-sm d-none d-md-block"></div>
+			<div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+		</div>
 
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
 
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
+		<footer class="container py-5">
+			<div class="row">
+				<div class="col-12 col-md">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24">
+						<title>Product</title>
+						<circle cx="12" cy="12" r="10" />
+						<path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+					</svg>
+					<small class="d-block mb-3 text-muted">&copy; 2017–2021</small>
+				</div>
+				<div class="col-6 col-md">
+					<h5>Features</h5>
+					<ul class="list-unstyled text-small">
+						<li><a class="link-secondary" href="#">Cool stuff</a></li>
+						<li><a class="link-secondary" href="#">Random feature</a></li>
+						<li><a class="link-secondary" href="#">Team feature</a></li>
+						<li><a class="link-secondary" href="#">Stuff for developers</a></li>
+						<li><a class="link-secondary" href="#">Another one</a></li>
+						<li><a class="link-secondary" href="#">Last time</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-md">
+					<h5>Resources</h5>
+					<ul class="list-unstyled text-small">
+						<li><a class="link-secondary" href="#">Resource name</a></li>
+						<li><a class="link-secondary" href="#">Resource</a></li>
+						<li><a class="link-secondary" href="#">Another resource</a></li>
+						<li><a class="link-secondary" href="#">Final resource</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-md">
+					<h5>Resources</h5>
+					<ul class="list-unstyled text-small">
+						<li><a class="link-secondary" href="#">Business</a></li>
+						<li><a class="link-secondary" href="#">Education</a></li>
+						<li><a class="link-secondary" href="#">Government</a></li>
+						<li><a class="link-secondary" href="#">Gaming</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-md">
+					<h5>About</h5>
+					<ul class="list-unstyled text-small">
+						<li><a class="link-secondary" href="#">Team</a></li>
+						<li><a class="link-secondary" href="#">Locations</a></li>
+						<li><a class="link-secondary" href="#">Privacy</a></li>
+						<li><a class="link-secondary" href="#">Terms</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
 
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="userguide3/">User Guide</a>.</p>
-	</div>
 
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
-</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 
 </body>
+
 </html>
