@@ -20,6 +20,17 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->view('welcome');
+	}
+
+	public function market()
+	{
+		$this->load->model('market_model');
+		$datamarket = $this->market_model->getData("market");
+		$data = array(
+			"dataMu" => $datamarket
+		);
+
+		$this->load->view('market', $data);
 	}
 }
