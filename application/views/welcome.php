@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 	<meta name="generator" content="Hugo 0.84.0">
-	<title>Product example · Bootstrap v5.0</title>
+	<title>Crypbox</title>
 
 	<link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/product/">
 
@@ -61,7 +61,7 @@
 			<div class="col-md-5 p-lg-5 mx-auto my-5">
 				<h1 class="display-4 fw-normal">Crypbox</h1>
 				<p class="lead fw-normal">The all-in-one crypto portal.</p>
-				<a class="btn btn-outline-secondary" href="#">Get Started</a>
+				<a class="btn btn-outline-secondary" href="./index.php/welcome/market">Get Started</a>
 			</div>
 			<div class="product-device shadow-sm d-none d-md-block"></div>
 			<div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>

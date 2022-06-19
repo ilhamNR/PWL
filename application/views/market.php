@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Product example · Bootstrap v5.0</title>
+    <title>Crypbox Market View</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/product/">
 
@@ -34,7 +34,7 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="./assets/css/product.css" rel="stylesheet">
+    <link href="<?php echo base_url("/assets/css/product.css")?>" rel="stylesheet">
 </head>
 
 <body>
@@ -68,6 +68,7 @@
                                 <th scope="col">Pair</th>
                                 <th scope="col">Price</th>
                                 <th scope="col">Status</th>
+                                <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -80,13 +81,17 @@
                                 echo "<td>" . $dat['pair'] . "</td>";
                                 echo "<td>" . $dat['price'] . "</td>";
                                 echo "<td>" . $dat['status'] . "</td>";
+                                echo "<td>
+                                            <button type='button' class='btn btn-primary'>Edit</button>
+                                            <button type='button' class='btn btn-danger'>Delete</button>
+                                    </td>";
                                 echo "</tr>";
                                 $row++;
                             }
                             ?>
                         </tbody>
                     </table>
-
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Add New Data</button>
                 </div>
             </div>
         </div>
