@@ -34,7 +34,7 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="<?php echo base_url("/assets/css/product.css")?>" rel="stylesheet">
+    <link href="<?php echo base_url("/assets/css/product.css") ?>" rel="stylesheet">
 </head>
 
 <body>
@@ -75,23 +75,111 @@
                             <?php
                             $row = 1;
                             foreach ($dataMu as $dat) {
-                                
+
                                 echo "<tr>";
                                 echo "<th scope='row'>" . $row . "</th>";
                                 echo "<td>" . $dat['pair'] . "</td>";
                                 echo "<td>" . $dat['price'] . "</td>";
                                 echo "<td>" . $dat['status'] . "</td>";
                                 echo "<td>
-                                            <button type='button' class='btn btn-primary'>Edit</button>
-                                            <button type='button' class='btn btn-danger'>Delete</button>
+                                <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#editData'>Edit</button>
+                                            <button type='button' class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#deleteData'>Delete</button>
                                     </td>";
+                                echo "
+                                    <div class='modal fade' id='deleteData' tabindex='-1' role='dialog' aria-labelledby='deleteDataLabel' aria-hidden='true'>
+                                        <div class='modal-dialog' role='document'>
+                                            <div class='modal-content'>
+                                                <div class='modal-header'>
+                                                    <h5 class='modal-title' id='deleteDataLabel'>Delete Data</h5>
+                                                    <button type='button' class='close' data-bs-dismiss='modal' aria-label='Close'>
+                                                        <span aria-hidden='true'>&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class='modal-body'>
+                                                <h3>Are you sure want delete this data?</h3>
+                                                </div>
+                                                <div class='modal-footer'>
+                                                    <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>
+                                                    <button type='button' class='btn btn-danger'>Save changes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>";
+                                    echo"
+                                    <!-- Modal -->
+                                    <div class='modal fade' id='editData' tabindex='-1' role='dialog' aria-labelledby='editDataLabel' aria-hidden='true'>
+                                        <div class='modal-dialog' role='document'>
+                                            <div class='modal-content'>
+                                                <div class='modal-header'>
+                                                    <h5 class='modal-title' id='editDataLabel'>Edit New Data</h5>
+                                                    <button type='button' class='close' data-bs-dismiss='modal' aria-label='Close'>
+                                                        <span aria-hidden='true'>&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class='modal-body'>
+                                                    <form style='text-align:left ;'>
+                                                        <div class='form-group'>
+                                                            <label for='pair'>Pair</label>
+                                                            <input type='text' class='form-control' id='pair' placeholder='Crypto Pairs' readonly>
+                                                        </div>
+                                                        <div class='form-group'>
+                                                            <label for='price'>Price</label>
+                                                            <input type='number' class='form-control' id='price' placeholder='Price'>
+                                                        </div>
+                                                        <div class='form-group'>
+                                                            <label for='status'>Status</label>
+                                                            <input type='text' class='form-control' id='status' placeholder='Price Status'>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class='modal-footer'>
+                                                    <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>
+                                                    <button type='button' class='btn btn-primary'>Save changes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>";
                                 echo "</tr>";
                                 $row++;
                             }
                             ?>
                         </tbody>
                     </table>
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Add New Data</button>
+
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addData">Add New Data</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="addData" tabindex="-1" role="dialog" aria-labelledby="addDataLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="addDataLabel">Add New Data</h5>
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form style="text-align:left ;">
+                                        <div class="form-group">
+                                            <label for="pair">Pair</label>
+                                            <input type="text" class="form-control" id="pair" placeholder="Crypto Pairs">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="price">Price</label>
+                                            <input type="number" class="form-control" id="price" placeholder="Price">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="status">Status</label>
+                                            <input type="text" class="form-control" id="status" placeholder="Price Status">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
